@@ -29,7 +29,7 @@
 			</div>
 
 			<div class="column-six">
-				<ul class="breadcrumbs">
+				<ul class="breadcrumbs" id="hansel">
 					<li><a href="">Breadcrumb</a></li>
 					<li><a href="">Another one</a></li>
 					<li><a href="">Bigger crumb</a></li>
@@ -38,5 +38,17 @@
 			
 		</div>
 		<div class="column"></div>
+
+		<!-- Scripts -->
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="js/hansel.js"></script>
+		<script>
+		$(function() {
+			$('#hansel').hansel({
+				_button_class: 'theme'
+			});
+		});
+		</script>
+
 	</body>
 </html>

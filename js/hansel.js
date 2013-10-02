@@ -2,12 +2,12 @@ jQuery(document).ready(function($) {
 
 	// Variables
 	var defaults = {
-		_button: 'drop-crumbs-button',
+		_button: 'hansel-back', // e.g. the button to activate the dropdown
 		_button_class: '',
-		_wrapper: 'drop-crumbs-wrapper',
+		_button_content: 'Go to...', // text to display in the button
+		_wrapper: 'hansel-pocket', // e.g. the wrapper element surrounding the breadcrumbs
 		_wrapper_class: '',
-		_dropdown: 'drop-crumbs-dropdown',
-		_dropdown_content: 'Go to...'
+		_dropdown: 'hansel-breadcrumbs' // e.g. the dropdown
 	};
 
 	// Init
@@ -27,7 +27,7 @@ jQuery(document).ready(function($) {
 
 				// Create needed elements
 				function wrap_breadcrumbs(breadcrumbs){
-					breadcrumbs.wrap('<div class="' + options._wrapper + " " + options._wrapper_class + '">').before('<a href="" class="' + options._button + " " + options._button_class + '">' + options._dropdown_content + '</a>');
+					breadcrumbs.wrap('<div class="' + options._wrapper + " " + options._wrapper_class + '">').before('<a href="" class="' + options._button + " " + options._button_class + '">' + options._button_content + '</a>');
 				}
 
 				// Drop the dropdown

@@ -1,0 +1,64 @@
+.hansel-back.theme {
+  color: #fcecd2;
+  background: #e62041;
+  border-color: #cb213d; }
+  .hansel-back.theme:after {
+    border-color: #fcecd2 transparent transparent transparent; }
+  .hansel-back.theme:hover {
+    background: #cb213d; }
+
+.hansel-back {
+  display: block;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 54px;
+  font-size: 2em;
+  line-height: 2.5em;
+  padding: 0 20px;
+  position: relative;
+  color: black;
+  background: white;
+  border: 2px solid #cccccc;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s; }
+  .hansel-back:after {
+    position: absolute;
+    content: "";
+    width: 0px;
+    height: 0px;
+    background: transparent;
+    border: 8px solid black;
+    -webkit-transition-property: all;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transform-origin: 8px 4px;
+    -moz-transform-origin: 8px 4px;
+    -ms-transform-origin: 8px 4px;
+    -o-transform-origin: 8px 4px;
+    transform-origin: 8px 4px;
+    border-color: black transparent transparent transparent;
+    top: 22px;
+    right: 20px; }
+  .hansel-back:hover {
+    background: #cccccc; }
+  .hansel-back.active:after {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  .hansel-back.active + .hansel-breadcrumbs {
+    display: block; }

@@ -1,0 +1,17 @@
+$color: #e62041;
+$dark-color: #cb213d;
+$light-color: #fcecd2;
+
+.hansel-back.theme {
+	color: $light-color;
+	background: $color;
+	border-color: $dark-color;
+
+	&:after {
+		border-color: $light-color transparent transparent transparent;
+	}
+
+	&:hover {
+		background: $dark-color;
+	}
+}
