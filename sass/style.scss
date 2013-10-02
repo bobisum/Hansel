@@ -96,7 +96,14 @@ h1 {
 	font-size: 16em;
 	font-weight: bold;
 	color: $red;
-	@include text-shadow(rgba(204, 34, 62, 1) 1px 1px 0, rgba(204, 34, 62, 1) 2px 2px 0, rgba(204, 34, 62, 1) 3px 3px 0, rgba(204, 34, 62, 1) 4px 4px 0, rgba(204, 34, 62, 1) 5px 5px 0, rgba(204, 34, 62, 1) 6px 6px 0);
+	@include text-shadow(rgba(204, 34, 62, 1) 1px 1px 0, 
+						rgba(204, 34, 62, 1) 2px 2px 0, 
+						rgba(204, 34, 62, 1) 3px 3px 0, 
+						rgba(204, 34, 62, 1) 4px 4px 0, 
+						rgba(204, 34, 62, 1) 5px 5px 0, 
+						rgba(204, 34, 62, 1) 6px 6px 0,
+						rgba(204, 34, 62, 1) 7px 7px 0,
+						rgba(204, 34, 62, 1) 8px 8px 0);
 	margin: 60px 0 20px;
 
 	+ p {
