@@ -99,6 +99,10 @@ a {
 	float: left;
 	@include sizing;
 }
+
+.demo-holder {
+	padding: 0 80px;
+}
 /* LAYOUT END */
 
 /* HEADING ANG TEXTS */

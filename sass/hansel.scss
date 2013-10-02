@@ -1,23 +1,29 @@
 @import "compass/css3";
-@import "theme.scss";
+// @import "theme.scss";
 
 @mixin hansel-transition {
 	@include transition-property(all);
 	@include transition-duration(0.3s);
 }
 
+.hansel-pocket {
+	width: 100%;
+	display: inline-block;
+	@include box-sizing(border-box);
+	position: relative;
+}
+
 .hansel-back {
 	display: block;
 	width: 100%;
 	@include box-sizing(border-box);
-	height: 54px;
+	height: 50px;
 	font-size: 2em;
 	line-height: 2.5em;
 	padding: 0 20px;
 	position: relative;
 	color: black;
 	background: white;
-	border: 2px solid #cccccc;
 	@include hansel-transition;
 
 	&:after {
@@ -28,21 +34,69 @@
 		background: transparent;
 		border: 8px solid black;
 		@include hansel-transition;
-		@include transform-origin(8px, 4px); // first value must be the same as the border width, the second must be 1/2 of that.
-		border-color: black transparent transparent transparent;
-		top: 22px;
-		right: 20px;
+		@include transform-origin(4px, 8px); // first value must be 1/2 of the border width, the second must be 1/1 of the border width. The ratio should be (1/1, 1/2) if you rotate to 180deg.
+		border-color: transparent transparent transparent black;
+		top: 18px;
+		right: 16px;
 	}
 
-	&:hover {
+	&:hover, &.active {
 		background: #cccccc;
 	}
 
 	&.active:after {
-		@include rotate(180deg);
+		@include rotate(90deg);
 	}
 
 	&.active + .hansel-breadcrumbs {
 		display: block;
+	}
+}
+
+@media only screen and (max-width: 2560px), only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+
+	.hansel-breadcrumbs {
+		width: 100%;
+		display: none;
+		background: white;
+		position: absolute;
+		top: 65px;
+
+		&:before {
+			content: "";
+			width: 0px;
+			height: 0px;
+			background: transparent;
+			border: 8px solid white;
+			border-color: transparent transparent white transparent;
+			position: absolute;
+			top: -16px;
+			right: 20px;
+		}
+
+		a {
+			height: 50px;
+			display: block;
+			color: black;
+			font-size: 1.6em;
+			line-height: 3.2em;
+			padding: 0 20px;
+			position: relative;
+
+			&:after {
+				content: "";
+				width: 0px;
+				height: 3px;
+				background: #cccccc;
+				@include hansel-transition;
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+			}
+
+			&:hover:after {
+				width: 100%;
+			}
+		}
 	}
 }

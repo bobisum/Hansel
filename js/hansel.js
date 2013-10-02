@@ -7,7 +7,9 @@ jQuery(document).ready(function($) {
 		_button_content: 'Go to...', // text to display in the button
 		_wrapper: 'hansel-pocket', // e.g. the wrapper element surrounding the breadcrumbs
 		_wrapper_class: '',
-		_dropdown: 'hansel-breadcrumbs' // e.g. the dropdown
+		_dropdown: 'hansel-breadcrumbs', // e.g. the dropdown
+		_dropdown_class: '',
+		_theme: ''
 	};
 
 	// Init
@@ -19,15 +21,27 @@ jQuery(document).ready(function($) {
 			var options = $.extend(defaults, options);
 
 			return this.each(function(){
-				var breadcrumbs = $(this);
-				breadcrumbs.addClass(options._dropdown);
+				var breadcrumbs = $(this),
+					wrapper = document.createElement( "div" ),
+					button = document.createElement( "a" ),
+					dropdown;
+
+				build_elements(breadcrumbs, wrapper, button);
 				wrap_breadcrumbs(breadcrumbs);
 
-				var dropdown = breadcrumbs.siblings('a');
+				dropdown = breadcrumbs.siblings('a');
 
 				// Create needed elements
+				function build_elements(breadcrumbs, wrapper, button) {
+					breadcrumbs.addClass(options._dropdown).addClass(options._theme);
+					$(wrapper).addClass(options._wrapper).addClass(options._wrapper_class);
+					$(button).addClass(options._button).addClass(options._button_class).addClass(options._theme).text(options._button_content);
+				}
+
+				// Create layout
 				function wrap_breadcrumbs(breadcrumbs){
-					breadcrumbs.wrap('<div class="' + options._wrapper + " " + options._wrapper_class + '">').before('<a href="" class="' + options._button + " " + options._button_class + '">' + options._button_content + '</a>');
+					breadcrumbs.wrap(wrapper);
+					breadcrumbs.before(button);
 				}
 
 				// Drop the dropdown

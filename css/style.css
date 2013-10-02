@@ -96,6 +96,9 @@ a {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+.demo-holder {
+  padding: 0 80px; }
+
 /* LAYOUT END */
 /* HEADING ANG TEXTS */
 h1 {

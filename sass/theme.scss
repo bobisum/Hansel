@@ -1,17 +1,31 @@
 $color: #e62041;
-$dark-color: #cb213d;
+$dark-color: #6E5960;
 $light-color: #fcecd2;
 
 .hansel-back.theme {
 	color: $light-color;
 	background: $color;
-	border-color: $dark-color;
 
 	&:after {
-		border-color: $light-color transparent transparent transparent;
+		border-color: transparent transparent transparent $light-color;
 	}
 
-	&:hover {
+	&:hover, &.active {
 		background: $dark-color;
+	}
+}
+
+@media only screen and (max-width: 2560px), only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+
+	.hansel-breadcrumbs.theme {
+		background: $color;
+
+		a {
+			color: $light-color;
+
+			&:after {
+				background: $dark-color;				
+			}
+		}
 	}
 }

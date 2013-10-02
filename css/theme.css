@@ -1,8 +1,15 @@
 .hansel-back.theme {
   color: #fcecd2;
-  background: #e62041;
-  border-color: #cb213d; }
+  background: #e62041; }
   .hansel-back.theme:after {
-    border-color: #fcecd2 transparent transparent transparent; }
-  .hansel-back.theme:hover {
-    background: #cb213d; }
+    border-color: transparent transparent transparent #fcecd2; }
+  .hansel-back.theme:hover, .hansel-back.theme.active {
+    background: #6e5960; }
+
+@media only screen and (max-width: 2560px), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  .hansel-breadcrumbs.theme {
+    background: #e62041; }
+    .hansel-breadcrumbs.theme a {
+      color: #fcecd2; }
+      .hansel-breadcrumbs.theme a:after {
+        background: #6e5960; } }
