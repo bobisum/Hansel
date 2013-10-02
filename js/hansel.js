@@ -19,16 +19,15 @@ jQuery(document).ready(function($) {
 			var options = $.extend(defaults, options);
 
 			return this.each(function(){
+				var breadcrumbs = $(this);
+				breadcrumbs.addClass(options._dropdown);
+				wrap_breadcrumbs(breadcrumbs);
 
-				var dropcrumbs = $(this);
-				dropcrumbs.addClass(options._dropdown);
-				wrap_breadcrumbs(dropcrumbs);
-
-				var dropdown = dropcrumbs.siblings('a');
+				var dropdown = breadcrumbs.siblings('a');
 
 				// Create needed elements
-				function wrap_breadcrumbs(dropcrumbs){
-					dropcrumbs.wrap('<div class="' + options._wrapper + " " + options._wrapper_class + '">').before('<a href="" class="' + options._button + " " + options._button_class + '">' + options._dropdown_content + '</a>');
+				function wrap_breadcrumbs(breadcrumbs){
+					breadcrumbs.wrap('<div class="' + options._wrapper + " " + options._wrapper_class + '">').before('<a href="" class="' + options._button + " " + options._button_class + '">' + options._dropdown_content + '</a>');
 				}
 
 				// Drop the dropdown
@@ -38,10 +37,7 @@ jQuery(document).ready(function($) {
 
 					$this.toggleClass('active');
 				});
-
 			});
 		}
-		
 	})
-
 });

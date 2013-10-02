@@ -21,6 +21,10 @@ $red: #E62041;
 	@include transition-duration(0.3s);
 }
 
+@mixin sizing {
+	@include box-sizing(border-box);
+}
+
 $prefixes: ("-webkit-","-moz-", "-o-", "");
 @mixin selection($color, $background) {
 	@each $prefix in $prefixes {
@@ -88,6 +92,12 @@ a {
 	&:not(:first-child) {
 		margin: 50px auto;
 	}
+}
+
+.column-six {
+	width: 50%;
+	float: left;
+	@include sizing;
 }
 /* LAYOUT END */
 
