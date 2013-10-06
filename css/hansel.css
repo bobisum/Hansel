@@ -6,7 +6,7 @@
   box-sizing: border-box;
   position: relative; }
 
-.hansel-back {
+.hansel-crumb {
   display: block;
   width: 100%;
   -webkit-box-sizing: border-box;
@@ -18,7 +18,7 @@
   padding: 0 20px;
   position: relative;
   color: black;
-  background: white;
+  background: #dbc195;
   -webkit-transition-property: all;
   -moz-transition-property: all;
   -o-transition-property: all;
@@ -27,7 +27,7 @@
   -moz-transition-duration: 0.3s;
   -o-transition-duration: 0.3s;
   transition-duration: 0.3s; }
-  .hansel-back:after {
+  .hansel-crumb:after {
     position: absolute;
     content: "";
     width: 0px;
@@ -50,15 +50,15 @@
     border-color: transparent transparent transparent black;
     top: 18px;
     right: 16px; }
-  .hansel-back:hover, .hansel-back.active {
-    background: #cccccc; }
-  .hansel-back.active:after {
+  .hansel-crumb:hover, .hansel-crumb.active {
+    background: #ffffff; }
+  .hansel-crumb.active:after {
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     -o-transform: rotate(90deg);
     transform: rotate(90deg); }
-  .hansel-back.active + .hansel-breadcrumbs {
+  .hansel-crumb.active + .hansel-breadcrumbs {
     display: block; }
 
 @media only screen and (max-width: 2560px), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {

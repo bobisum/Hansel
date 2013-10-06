@@ -2,7 +2,7 @@ jQuery(document).ready(function($) {
 
 	// Variables
 	var defaults = {
-		_button: 'hansel-back', // e.g. the button to activate the dropdown
+		_button: 'hansel-crumb', // e.g. the button to activate the dropdown
 		_button_class: '',
 		_button_content: 'Go to...', // text to display in the button
 		_wrapper: 'hansel-pocket', // e.g. the wrapper element surrounding the breadcrumbs
