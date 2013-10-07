@@ -1,4 +1,4 @@
-@import "compass/css3";
+ @import "compass/css3";
 // @import "theme.scss";
 
 @mixin hansel-transition {
@@ -6,7 +6,7 @@
 	@include transition-duration(0.3s);
 }
 
-$main-color: #E8D7BB;
+$main-color: #E62041;
 
 .hansel-pocket {
 	width: 100%;
