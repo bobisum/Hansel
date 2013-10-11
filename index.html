@@ -17,12 +17,14 @@
 	</head>
 	<body>
 		<div class="column clearfix-hidden">
-			<h1>Hansel</h1>
+			<h1>Hansel.</h1>
 			<p>who better to help you with... <br> some breadcrumbs!</p>
 		</div>
+
 		<div class="column">
 
 			<div class="column-six">
+				<h3 class="screen-size">Desktop</h3>
 				<ul class="breadcrumb">
 					<li><a href="">Breadcrumb</a></li>
 					<li><a href="">Another one</a></li>
@@ -31,6 +33,7 @@
 			</div>
 
 			<div class="column-six demo-holder">
+				<h3 class="screen-size">Mobile</h3>
 				<ul class="breadcrumb demo">
 					<li><a href="">Breadcrumb</a></li>
 					<li><a href="">Another one</a></li>
@@ -39,11 +42,22 @@
 			</div>
 			
 		</div>
-		<div class="column"></div>
+
+		<div class="column">
+			<h2>Plugin features</h2>
+
+			<ul>
+				<li>Make breadcrumbs more easy to use on mobile</li>
+				<li>Easily customize the basic layout (or use the available skins)</li>
+				<li>JQuery or Zepto... Hansel doesn't mind</li>
+				<li>Really light ~ 0.86KB (minified)</li>
+			</ul>
+		</div>
 
 		<!-- Scripts -->
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script src="js/hansel.js"></script>
+		<!-- <script src="http://zeptojs.com/zepto.min.js"></script> -->
+		<script src="js/hansel.min.js"></script>
 		<script>
 		$(function() {
 			$('.breadcrumb').hansel({

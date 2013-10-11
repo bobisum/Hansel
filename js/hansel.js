@@ -1,10 +1,10 @@
-jQuery(document).ready(function($) {
+;(function($) {
 
 	// Variables
 	var defaults = {
 		_button: 'hansel-crumb', // e.g. the button to activate the dropdown
 		_button_class: '',
-		_button_content: 'Go to...', // text to display in the button
+		_button_content: 'Navigate to...', // text to display in the button
 		_wrapper: 'hansel-pocket', // e.g. the wrapper element surrounding the breadcrumbs
 		_wrapper_class: '',
 		_dropdown: 'hansel-breadcrumbs', // e.g. the dropdown
@@ -13,7 +13,8 @@ jQuery(document).ready(function($) {
 	};
 
 	// Init
-	$.fn.extend({
+
+	$.extend($.fn, {
 
 		hansel: function(options){
 
@@ -47,11 +48,20 @@ jQuery(document).ready(function($) {
 				// Drop the dropdown
 				dropdown.click(function(e){
 					e.preventDefault();
+					e.stopPropagation();
 					$this = $(this);
 
 					$this.toggleClass('active');
 				});
+
+				// Close on click outside of the dropdown
+				$('body').click(function(e){
+					e.preventDefault();
+
+					dropdown.removeClass('active');
+				});
 			});
 		}
-	})
-});
+	});
+
+})(window.jQuery || window.Zepto || window.$);

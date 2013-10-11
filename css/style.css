@@ -144,6 +144,12 @@ h1 {
     line-height: 1.2em;
     color: #e62041; }
 
+.screen-size {
+  font-size: 6em;
+  font-weight: bold;
+  padding: 0 0 50px;
+  color: #ead9bd; }
+
 /* HEADING ANG TEXTS END */
 /* BUTTONS AND LINKS */
 .btn {

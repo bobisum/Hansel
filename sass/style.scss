@@ -173,6 +173,13 @@ h1 {
 		color: $red;
 	}
 }
+
+.screen-size {
+	font-size: 6em;
+	font-weight: bold;
+	padding: 0 0 50px;
+	color: darken($main_color, 8);
+}
 /* HEADING ANG TEXTS END */
 
 /* BUTTONS AND LINKS */
