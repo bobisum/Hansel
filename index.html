@@ -9,6 +9,8 @@
 		
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/hansel.css">
+		<link rel="stylesheet" href="css/theme.css">
+
 
 		<link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
 
@@ -29,7 +31,7 @@
 			</div>
 
 			<div class="column-six demo-holder">
-				<ul class="breadcrumb" id="hansel">
+				<ul class="breadcrumb demo">
 					<li><a href="">Breadcrumb</a></li>
 					<li><a href="">Another one</a></li>
 					<li><a href="">Bigger crumb</a></li>
@@ -44,7 +46,7 @@
 		<script src="js/hansel.js"></script>
 		<script>
 		$(function() {
-			$('#hansel').hansel({
+			$('.breadcrumb').hansel({
 				_theme: 'theme'
 			});
 		});

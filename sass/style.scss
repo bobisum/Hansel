@@ -103,6 +103,52 @@ a {
 
 .demo-holder {
 	padding: 0 80px;
+
+	.hansel-crumb {
+		display: block !important;
+
+		&.active + .hansel-breadcrumbs.demo {
+			display: block;
+		}
+	}
+
+	.hansel-breadcrumbs.demo {
+		display: none;
+		width: 100%;
+		position: absolute;
+		top: 65px;
+
+		&:before {
+			content: "";
+			width: 0px;
+			height: 0px;
+			background: transparent;
+			border-style: solid;
+			border-width: 8px;
+			border-color: transparent transparent $red transparent;
+			position: absolute;
+			top: -16px;
+			right: 20px;
+		}
+
+		li {
+			width: 100%;
+		}
+
+		a {
+			height: 50px;
+			width: 100%;
+			display: block;
+			font-size: 2em;
+			line-height: 2.5em;
+			padding: 0 20px;
+			position: relative;
+
+			&:before, &:after {
+				display: none;
+			}
+		}
+	}
 }
 /* LAYOUT END */
 
@@ -155,69 +201,3 @@ h1 {
 	}
 }
 /* BUTTONS AND LINKS END */
-
-
-
-/* BREADCRUMBS */
-.breadcrumb {
-	float: left;
-
-	li {
-		float: left;
-		margin-right: 15px;
-
-		&:first-child a:before {
-			display: none;
-		}
-	}
-
-	a {
-		display: block;
-		width: 100%;
-		@include sizing;
-		@include master_transition;
-		height: 50px;
-		font-size: 2em;
-		line-height: 2.5em;
-		padding: 0 20px;
-		margin-right: 5px;
-		position: relative;
-		color: white;
-		background: $red;
-
-		&:before, &:after {
-			position: absolute;
-			content: "";
-			height: 0px;
-			width: 0px;
-			top: 0px;
-			border-style: solid;
-			@include master_transition;
-		}
-
-		&:after {
-			right: -10px;
-			border-width: 25px 0 25px 10px;
-			border-color: transparent transparent transparent $red;
-		}
-
-		&:before {
-			left: -10px;
-			border-width: 25px 0 25px 10px;
-			border-color: $red $red $red transparent;
-		}
-		
-		&:hover, &.active {
-			background: $dark_red;
-
-			&:after {
-				border-color: transparent transparent transparent $dark_red;
-			}
-
-			&:before {
-				border-color: $dark_red $dark_red $dark_red transparent;
-			} 
-		}
-	}
-}
-/* BREADCRUMBS END */

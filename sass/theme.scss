@@ -1,32 +1,106 @@
-$red: #E62041;
+@import "compass/css3";
 
 $color: #e62041;
-$dark-color: #6E5960;
-$light-color: #fcecd2;
+$hover-color: #cc223e;
+
+$arrow-color: #ffffff;
+
+$font-color: #ffffff;
+
+@mixin theme-transition {
+	@include transition-property(all);
+	@include transition-duration(0.3s);
+}
 
 .hansel-crumb.theme {
-	color: $light-color;
+	color: $font-color;
 	background: $color;
 
 	&:after {
-		border-color: transparent transparent transparent $light-color;
+		border-color: transparent transparent transparent $arrow-color;
 	}
 
 	&:hover, &.active {
-		background: $dark-color;
+		background: $hover-color;
 	}
 }
 
-@media only screen and (max-width: 2560px), only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+.hansel-breadcrumbs.theme {
+	float: left;
+
+	li {
+		float: left;
+		margin-right: 15px;
+
+		&:first-child a:before {
+			display: none;
+		}
+	}
+
+	a {
+		display: block;
+		width: 100%;
+		@include box-sizing(border-box);
+		@include theme-transition;
+		height: 50px;
+		font-size: 2em;
+		line-height: 2.5em;
+		padding: 0 20px;
+		margin-right: 5px;
+		position: relative;
+		color: white;
+		background: $color;
+
+		&:before, &:after {
+			position: absolute;
+			content: "";
+			height: 0px;
+			width: 0px;
+			top: 0px;
+			border-style: solid;
+			@include theme-transition;
+		}
+
+		&:after {
+			right: -10px;
+			border-width: 25px 0 25px 10px;
+			border-color: transparent transparent transparent $color;
+		}
+
+		&:before {
+			left: -10px;
+			border-width: 25px 0 25px 10px;
+			border-color: $color $color $color transparent;
+		}
+		
+		&:hover, &.active {
+			background: $hover-color;
+
+			&:after {
+				border-color: transparent transparent transparent $hover-color;
+			}
+
+			&:before {
+				border-color: $hover-color $hover-color $hover-color transparent;
+			} 
+		}
+	}
+}
+
+@media only screen and (max-width: 320px), only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
 
 	.hansel-breadcrumbs.theme {
 		background: $color;
 
-		a {
-			color: $light-color;
+		&:before {
+			border-color: transparent transparent $color transparent;
+		}
 
-			&:after {
-				background: $dark-color;				
+		a {
+			color: $font-color;
+
+			&:before, &:after {
+				display: none;
 			}
 		}
 	}

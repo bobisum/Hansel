@@ -1,15 +1,76 @@
 .hansel-crumb.theme {
-  color: #fcecd2;
+  color: white;
   background: #e62041; }
   .hansel-crumb.theme:after {
-    border-color: transparent transparent transparent #fcecd2; }
+    border-color: transparent transparent transparent white; }
   .hansel-crumb.theme:hover, .hansel-crumb.theme.active {
-    background: #6e5960; }
+    background: #cc223e; }
 
-@media only screen and (max-width: 2560px), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+.hansel-breadcrumbs.theme {
+  float: left; }
+  .hansel-breadcrumbs.theme li {
+    float: left;
+    margin-right: 15px; }
+    .hansel-breadcrumbs.theme li:first-child a:before {
+      display: none; }
+  .hansel-breadcrumbs.theme a {
+    display: block;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition-property: all;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    height: 50px;
+    font-size: 2em;
+    line-height: 2.5em;
+    padding: 0 20px;
+    margin-right: 5px;
+    position: relative;
+    color: white;
+    background: #e62041; }
+    .hansel-breadcrumbs.theme a:before, .hansel-breadcrumbs.theme a:after {
+      position: absolute;
+      content: "";
+      height: 0px;
+      width: 0px;
+      top: 0px;
+      border-style: solid;
+      -webkit-transition-property: all;
+      -moz-transition-property: all;
+      -o-transition-property: all;
+      transition-property: all;
+      -webkit-transition-duration: 0.3s;
+      -moz-transition-duration: 0.3s;
+      -o-transition-duration: 0.3s;
+      transition-duration: 0.3s; }
+    .hansel-breadcrumbs.theme a:after {
+      right: -10px;
+      border-width: 25px 0 25px 10px;
+      border-color: transparent transparent transparent #e62041; }
+    .hansel-breadcrumbs.theme a:before {
+      left: -10px;
+      border-width: 25px 0 25px 10px;
+      border-color: #e62041 #e62041 #e62041 transparent; }
+    .hansel-breadcrumbs.theme a:hover, .hansel-breadcrumbs.theme a.active {
+      background: #cc223e; }
+      .hansel-breadcrumbs.theme a:hover:after, .hansel-breadcrumbs.theme a.active:after {
+        border-color: transparent transparent transparent #cc223e; }
+      .hansel-breadcrumbs.theme a:hover:before, .hansel-breadcrumbs.theme a.active:before {
+        border-color: #cc223e #cc223e #cc223e transparent; }
+
+@media only screen and (max-width: 320px), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   .hansel-breadcrumbs.theme {
     background: #e62041; }
+    .hansel-breadcrumbs.theme:before {
+      border-color: transparent transparent #e62041 transparent; }
     .hansel-breadcrumbs.theme a {
-      color: #fcecd2; }
-      .hansel-breadcrumbs.theme a:after {
-        background: #6e5960; } }
+      color: white; }
+      .hansel-breadcrumbs.theme a:before, .hansel-breadcrumbs.theme a:after {
+        display: none; } }

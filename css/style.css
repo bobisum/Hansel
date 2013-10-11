@@ -98,6 +98,38 @@ a {
 
 .demo-holder {
   padding: 0 80px; }
+  .demo-holder .hansel-crumb {
+    display: block !important; }
+    .demo-holder .hansel-crumb.active + .hansel-breadcrumbs.demo {
+      display: block; }
+  .demo-holder .hansel-breadcrumbs.demo {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 65px; }
+    .demo-holder .hansel-breadcrumbs.demo:before {
+      content: "";
+      width: 0px;
+      height: 0px;
+      background: transparent;
+      border-style: solid;
+      border-width: 8px;
+      border-color: transparent transparent #e62041 transparent;
+      position: absolute;
+      top: -16px;
+      right: 20px; }
+    .demo-holder .hansel-breadcrumbs.demo li {
+      width: 100%; }
+    .demo-holder .hansel-breadcrumbs.demo a {
+      height: 50px;
+      width: 100%;
+      display: block;
+      font-size: 2em;
+      line-height: 2.5em;
+      padding: 0 20px;
+      position: relative; }
+      .demo-holder .hansel-breadcrumbs.demo a:before, .demo-holder .hansel-breadcrumbs.demo a:after {
+        display: none; }
 
 /* LAYOUT END */
 /* HEADING ANG TEXTS */
@@ -135,64 +167,3 @@ h1 {
     text-decoration: underline; }
 
 /* BUTTONS AND LINKS END */
-/* BREADCRUMBS */
-.breadcrumb {
-  float: left; }
-  .breadcrumb li {
-    float: left;
-    margin-right: 15px; }
-    .breadcrumb li:first-child a:before {
-      display: none; }
-  .breadcrumb a {
-    display: block;
-    width: 100%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-transition-property: all;
-    -moz-transition-property: all;
-    -o-transition-property: all;
-    transition-property: all;
-    -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    height: 50px;
-    font-size: 2em;
-    line-height: 2.5em;
-    padding: 0 20px;
-    margin-right: 5px;
-    position: relative;
-    color: white;
-    background: #e62041; }
-    .breadcrumb a:before, .breadcrumb a:after {
-      position: absolute;
-      content: "";
-      height: 0px;
-      width: 0px;
-      top: 0px;
-      border-style: solid;
-      -webkit-transition-property: all;
-      -moz-transition-property: all;
-      -o-transition-property: all;
-      transition-property: all;
-      -webkit-transition-duration: 0.3s;
-      -moz-transition-duration: 0.3s;
-      -o-transition-duration: 0.3s;
-      transition-duration: 0.3s; }
-    .breadcrumb a:after {
-      right: -10px;
-      border-width: 25px 0 25px 10px;
-      border-color: transparent transparent transparent #e62041; }
-    .breadcrumb a:before {
-      left: -10px;
-      border-width: 25px 0 25px 10px;
-      border-color: #e62041 #e62041 #e62041 transparent; }
-    .breadcrumb a:hover, .breadcrumb a.active {
-      background: #cc223e; }
-      .breadcrumb a:hover:after, .breadcrumb a.active:after {
-        border-color: transparent transparent transparent #cc223e; }
-      .breadcrumb a:hover:before, .breadcrumb a.active:before {
-        border-color: #cc223e #cc223e #cc223e transparent; }
-
-/* BREADCRUMBS END */

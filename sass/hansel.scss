@@ -1,5 +1,4 @@
- @import "compass/css3";
-// @import "theme.scss";
+@import "compass/css3";
 
 @mixin hansel-transition {
 	@include transition-property(all);
@@ -16,7 +15,7 @@ $main-color: #E62041;
 }
 
 .hansel-crumb {
-	display: block;
+	display: none;
 	width: 100%;
 	@include box-sizing(border-box);
 	height: 50px;
@@ -55,7 +54,11 @@ $main-color: #E62041;
 	}
 }
 
-@media only screen and (max-width: 2560px), only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+@media only screen and (max-width: 320px), only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+
+	.hansel-crumb {
+		display: block;
+	}
 
 	.hansel-breadcrumbs {
 		width: 100%;
@@ -76,29 +79,19 @@ $main-color: #E62041;
 			right: 20px;
 		}
 
+		li {
+			width: 100%;
+		}
+
 		a {
 			height: 50px;
+			width: 100%;
 			display: block;
 			color: black;
 			font-size: 1.6em;
 			line-height: 3.2em;
 			padding: 0 20px;
 			position: relative;
-
-			&:after {
-				content: "";
-				width: 0px;
-				height: 3px;
-				background: #cccccc;
-				@include hansel-transition;
-				position: absolute;
-				bottom: 0px;
-				left: 0px;
-			}
-
-			&:hover:after {
-				width: 100%;
-			}
 		}
 	}
 }
