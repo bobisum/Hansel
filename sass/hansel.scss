@@ -16,6 +16,7 @@ $main-color: #E62041;
 
 .hansel-crumb {
 	display: none;
+	cursor: pointer;
 	width: 100%;
 	@include box-sizing(border-box);
 	height: 50px;
